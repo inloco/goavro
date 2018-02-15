@@ -40,7 +40,7 @@ func Union(name string, datum interface{}) interface{} {
 	if datum == nil && name == "null" {
 		return nil
 	}
-	return map[string]interface{}{name: datum}
+	return datum
 }
 
 func buildCodecForTypeDescribedBySlice(st map[string]*Codec, enclosingNamespace string, schemaArray []interface{}) (*Codec, error) {
